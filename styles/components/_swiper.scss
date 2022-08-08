@@ -1,0 +1,24 @@
+.swiper{
+  &,
+  &-wrapper,
+  &-slide{
+    @extend .h-100;
+  }
+  &-pagination {
+    @extend .text-start;
+    @extend .px-4;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .mb-4;
+    &-bullet{
+      @extend .bg-white;
+      @extend .opacity-1;
+      @extend .w-12px;
+      @extend .h-12px;
+      &.swiper-pagination-bullet-active{
+        @extend .w-18px;
+        @extend .h-18px;
+      }
+    }
+  }
+}

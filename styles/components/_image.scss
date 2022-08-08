@@ -1,0 +1,13 @@
+.image-container{
+  span,
+  img{
+    @extend .position-static;
+  }
+  img{
+    @extend .w-auto;
+    @extend .h-auto;
+    @extend .maxw-130px;
+    @extend .minh-inherit;
+    @extend .maxh-60px;
+  }
+}

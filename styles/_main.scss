@@ -1,0 +1,15 @@
+@import "common/variable";
+@import "~bootstrap/scss/bootstrap";
+@import "common/mixins";
+@import "common/global";
+
+@import "components/nav";
+@import "components/player";
+@import "components/player2";
+@import "components/image";
+@import "components/input";
+@import "components/swiper";
+@import "components/button";
+@import "components/dropdown";
+@import "components/modal";
+@import "components/spin";

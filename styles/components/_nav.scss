@@ -1,0 +1,29 @@
+.nav-left-sidebar{
+  @extend .flex-column;
+  .nav-link{
+    @extend .text-white;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .cursor-pointer;
+    @extend .rounded-te-100px;
+    @extend .rounded-be-100px;
+    @extend .rounded-ts-30px;
+    @extend .rounded-bs-30px;
+    svg{
+      @extend .me-2;
+    }
+    &.active{
+      @extend .text-dark;
+      &:hover,
+      &{
+        @extend .bg-warning;
+      }
+    }
+    &:hover{
+      @extend .bg-gray-1;
+    }
+  }
+  .nav-item{
+    @extend .mb-2;
+  }
+}

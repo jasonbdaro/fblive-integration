@@ -1,0 +1,31 @@
+.modal{
+  &-main-menu{
+    .modal{
+      &-dialog{
+        @extend .h-100;
+        @extend .d-flex;
+        @extend .m-0;
+        @extend .maxw-370px;
+      }
+      &-content{
+        @extend .border-none;
+        @extend .rounded-0;
+        @extend .bg-dark;
+        @extend .bg-primary-2;
+      }
+    }
+  }
+  &-list-content{
+    .modal{
+      &-dialog{
+        @extend .h-100;
+        @extend .d-flex;
+        @extend .my-0;
+        @extend .maxw-100;
+      }
+      &-content{
+        @extend .bg-dark;
+      }
+    }
+  }
+}

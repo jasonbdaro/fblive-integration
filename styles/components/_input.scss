@@ -1,0 +1,33 @@
+.input{
+  &-search{
+    @extend .w-100;
+    @extend .bg-transparent;
+    @extend .border-1-solid-warning;
+    @extend .rounded-100px;
+    @extend .py-3;
+    @extend .px-4;
+    @extend .text-white;
+    @extend .placeholder-white;
+  }
+  &-default{
+    @extend .w-100;
+    @extend .bg-transparent;
+    @extend .border-1-solid-white;
+    @extend .py-2;
+    @extend .px-3;
+    @extend .text-white;
+    @extend .rounded-8px;
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+    &::-moz-placeholder {
+      color: $white;
+    }
+    &:-ms-input-placeholder {
+      color: $white;
+    }
+    &:-moz-placeholder {
+      color: $white;
+    }
+  }
+}

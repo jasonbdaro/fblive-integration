@@ -1,0 +1,17 @@
+.video-react{
+  &.video-react{
+    &-fluid,
+    &-16-9,
+    &-4-3{
+      @extend .h-100;
+      @extend .pt-0;
+    }
+  }
+  .video-react-big-play-button{
+    @extend .start-0;
+    @extend .top-0;
+    @extend .bottom-0;
+    @extend .end-0;
+    @extend .m-auto;
+  }
+}

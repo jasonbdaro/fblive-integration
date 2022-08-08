@@ -1,0 +1,37 @@
+@mixin border( $borderWidth, $borderStyle, $borderColor ){
+  border-width: $borderWidth;
+  border-style: $borderStyle;
+  border-color: $borderColor;
+}
+
+@mixin border-bottom( $borderWidth, $borderStyle, $borderColor ){
+  border-bottom-width: $borderWidth;
+  border-bottom-style: $borderStyle;
+  border-bottom-color: $borderColor;
+}
+
+@mixin cursor( $cursor ){
+  cursor: $cursor;
+}
+
+@mixin scrollbar( $scrollbarWidth, $scrollbarBg, $scrollbarTrackBg, $scrollbarThumbBg, $scrollbarThumbRounded ){
+  &::-webkit-scrollbar-track{
+    background-color: $scrollbarTrackBg;
+  }
+  &::-webkit-scrollbar{
+    width: $scrollbarWidth;
+    background-color: $scrollbarBg;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $scrollbarThumbBg;
+    border-radius: $scrollbarThumbRounded;
+  }
+}
+
+
+@mixin placeholder {
+  ::-webkit-input-placeholder { @content }
+  :-moz-placeholder           { @content }
+  ::-moz-placeholder          { @content }
+  :-ms-input-placeholder      { @content }
+}

@@ -1,0 +1,316 @@
+html,
+body {
+  @extend .p-0;
+  @extend .m-0;
+  @extend .h-100;
+  @extend .bg-primary-2;
+  @extend .text-white;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  > div:first-of-type{
+    @extend .h-100;
+  }
+}
+
+body{
+  @extend .overflow-y-lg-hidden;
+  @extend .scrollbar-1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overflow{
+  &-y-auto{
+    overflow-y: auto$imp;
+  }
+  &-x-auto{
+    overflow-x: auto$imp;
+  }
+  &-x-hidden{
+    overflow-x: hidden$imp;
+  }
+  &-y{
+    &-hidden{
+      overflow-y: hidden$imp;
+    }
+    @include media-breakpoint-up(lg) {
+      &-lg-hidden{
+        overflow-y: hidden$imp;
+      }
+    }
+  }
+}
+
+
+
+.scrollbar-1{
+  @include scrollbar( 10px, $transparent, $transparent, $gray-2, 100px );
+}
+
+.box-shadow-none{
+  box-shadow: none$imp;
+}
+
+.placeholder-white{
+  &::-webkit-input-placeholder {
+    color: $white$imp;
+  }
+  &::-moz-placeholder {
+    color: $white$imp;
+  }
+  &:-ms-input-placeholder {
+    color: $white$imp;
+  }
+  &:-moz-placeholder {
+    color: $white$imp;
+  }
+  &-none{
+    border: none$imp;
+  }
+}
+
+.border{
+  &-1-solid{
+    &-white{
+      @include border( 1px, solid, $white );
+    }
+    &-transparent{
+      @include border( 1px, solid, transparent );
+    }
+    &-warning{
+      @include border( 1px, solid, $warning );
+    }
+  }
+  &-bottom-solid-white{
+    @include border-bottom( 1px, solid, $white );
+  }
+  &-none{
+    border: none$imp;
+  }
+}
+
+.rounded-ts{
+  @for $i from 0 through 100 {
+    &-#{$i}px {
+      border-top-left-radius: #{($i * 1)}px$imp;
+    }
+  }
+}
+
+.rounded-te{
+  @for $i from 0 through 100 {
+    &-#{$i}px {
+      border-top-right-radius: #{($i * 1)}px$imp;
+    }
+  }
+}
+
+.rounded-bs{
+  @for $i from 0 through 100 {
+    &-#{$i}px {
+      border-bottom-left-radius: #{($i * 1)}px$imp;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  $value: $i;
+}
+
+.rounded-be{
+  @for $i from 0 through 100 {
+    &-#{$i}px {
+      border-bottom-right-radius: #{($i * 1)}px$imp;
+    }
+  }
+}
+
+.z-index{
+  @for $i from 1000 through 1080 {
+    &-#{$i} {
+      z-index: #{($i * 1)}$imp;
+    }
+  }
+}
+
+.h{
+  @for $i from 0 through 500 {
+    &-#{$i}px {
+      height: #{($i * 1)}px$imp;
+    }
+  }
+  @for $i from 0 through 100 {
+    &-lg-#{$i} {
+      @include media-breakpoint-up(lg) {
+        height: #{($i * 1) + '%'}$imp;
+      }
+    }
+  }
+}
+
+.minh{
+  @for $i from 0 through 500 {
+    &-#{$i}px {
+      min-height: #{($i * 1)}px$imp;
+    }
+  }
+  &-inherit{
+    min-height: inherit$imp;
+  }
+}
+
+.maxh{
+  @for $i from 0 through 500 {
+    &-#{$i}px {
+      max-height: #{($i * 1)}px$imp;
+    }
+  }
+  &-inherit{
+    max-height: inherit$imp;
+  }
+}
+
+.maxw{
+  @for $i from 0 through 500 {
+    &-#{$i}px {
+      max-width: #{($i * 1)}px$imp;
+    }
+  }
+  @for $i from 0 through 100 {
+    &-#{$i} {
+      max-width: #{($i * 1) + '%' }$imp;
+    }
+  }
+  &-inherit{
+    max-width: inherit$imp;
+  }
+}
+
+.rounded{
+  @for $i from 0 through 500 {
+    &-#{$i}px {
+      border-radius: #{($i * 1)}px$imp;
+    }
+  }
+}
+
+.top{
+  @for $i from 0 through 100 {
+    &-n#{$i}px {
+      top: -#{($i * 1)}px$imp;
+    }
+  }
+}
+
+.left{
+  @for $i from 0 through 100 {
+    &-n#{$i}px {
+      left: -#{($i * 1)}px$imp;
+    }
+  }
+}
+
+.opacity-1{
+  opacity: 1$imp;
+}
+
+.w{
+  @for $i from 0 through 500 {
+    &-#{$i}px {
+      width: #{($i * 1)}px$imp;
+    }
+    @include media-breakpoint-up(lg) {
+      &-lg-#{$i}px{
+        width: #{($i * 1)}px$imp;
+      }
+    }
+  }
+  @for $i from 0 through 100 {
+    &-#{$i}p {
+      width: #{($i * 1) + '%'}$imp;
+    }
+    @include media-breakpoint-up(lg) {
+      &-lg-#{$i}p {
+        width: #{($i * 1) + '%'}$imp;
+      }
+    }
+  }
+}
+
+.fs{
+  &-lg-6{
+    @include media-breakpoint-up(lg) {
+      font-size: 1.025rem$imp;
+    }
+  }
+}
+
+.maxw{
+  @for $i from 0 through 500 {
+    &-#{$i}px {
+      max-width: #{($i * 1)}px$imp;
+    }
+  }
+}
+
+.top{
+  @for $i from 0 through 500 {
+    &-n#{$i}px {
+      top: -#{($i * 1)}px$imp;
+    }
+  }
+}
+
+.cursor{
+  &-pointer{
+    @include cursor( pointer$imp );
+  }
+  &-not-allowed{
+    @include cursor( not-allowed$imp );
+  }
+}
+
+.bg{
+  &-gray{
+    &-1{ background-color: $gray-1$imp; }
+    &-2{ background-color: $gray-2$imp; }
+    &-3{ background-color: $gray-3$imp; }
+  }
+  &-primary-2{
+    background-color: $primary-2$imp;
+  }
+  &-transparent{
+    background-color: $transparent$imp;
+  }
+  &-cover{ background-size: cover$imp; }
+  &-center{ background-position: center$imp;}
+  &-size-830px{
+    background-size: 830px;
+  }
+  &-norepeat{
+    background-repeat: no-repeat;
+  }
+  &-gradient-v-transparent-dark{
+    background: rgb(203,6,14);
+    background: linear-gradient(180deg, rgba(203,6,14,0) 0%, rgba(1,1,1,0.6951155462184874) 100%);
+  }
+}
+
+.text-gray-4{
+  color: $gray-4$imp;
+}
+.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  &-1{ -webkit-line-clamp: 1; }
+  &-2{ -webkit-line-clamp: 2; }
+  &-3{ -webkit-line-clamp: 3; }
+}

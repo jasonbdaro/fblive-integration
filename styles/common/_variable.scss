@@ -1,0 +1,44 @@
+$dark: #000000;
+$white: #ffffff;
+$transparent: transparent;
+
+$primary-2: #62CDF9;
+$black: #293f4c;
+
+$gray-1: #2c2c2c;
+$gray-2: #616161;
+$gray-3: #1f1f1f;
+$gray-4: #959595;
+
+$imp: !important;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+ (
+   0: 0,
+   1: ($spacer * .25),    //4px
+   2: ($spacer * .5),     //8px
+   3: $spacer,            //16px
+   4: ($spacer * 1.5),    //24px
+   5: ($spacer * 3),      //48px
+   6: ($spacer * 4),      //64px
+   7: ($spacer * 5),      //80px
+   8: ($spacer * 6.25),   //100px
+   9: ($spacer * 7.5),    //120px
+   10: ($spacer * 9.375)  //150px
+ ),
+ $spacers
+);
+
+$font-sizes: (
+  1: 2.25rem,
+  2: 1.875rem,
+  3: 1.5625rem,
+  4: 1.25rem,
+  5: 1.125rem,
+  6: 1.025rem,
+  7: 0.75rem,
+  8: 0.25rem,
+);

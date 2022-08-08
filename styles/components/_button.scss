@@ -1,0 +1,12 @@
+.btn{
+  @extend .rounded-50px;
+  @extend .px-4;
+  @extend .d-inline-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  &-link{
+    &:focus{
+      @extend .box-shadow-none;
+    }
+  }
+}

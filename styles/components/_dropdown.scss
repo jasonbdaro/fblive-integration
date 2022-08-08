@@ -1,0 +1,8 @@
+.dropdown-hide-arrow{
+  &:after{
+    @extend .d-none;
+  }
+  &.btn{
+    @extend .px-0;
+  }
+}
