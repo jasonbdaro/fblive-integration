@@ -11,6 +11,7 @@ const Home: NextPage = () => {
     formState: { errors, isValid, isSubmitting }, handleSubmit } = useForm({
     mode: 'onChange',
   })
+  const nerrors: any = errors
   const [accounts, setAccounts] = useState([])
   const [loading, setLoading] = useState(false)
 
@@ -67,7 +68,7 @@ const Home: NextPage = () => {
           <Form.Group className="mb-3" controlId="profile">
             <Form.Label>Stream Profile Name <span className="text-danger">*</span></Form.Label>
             <Form.Control {...register('profile', {required: true})} type="text" />
-            {'required' === errors?.profile?.type && <Form.Text id="profile" className="text-warning">
+            {'required' === nerrors?.profile?.type && <Form.Text id="profile" className="text-warning">
               This field is required.
             </Form.Text>}
           </Form.Group>
@@ -75,7 +76,7 @@ const Home: NextPage = () => {
           <Form.Group className="mb-3" controlId="title">
             <Form.Label>Title <span className="text-danger">*</span></Form.Label>
             <Form.Control {...register('title', {required: true})} type="text" />
-            {'required' === errors?.title?.type && <Form.Text id="profile" className="text-warning">
+            {'required' === nerrors?.title?.type && <Form.Text id="profile" className="text-warning">
               This field is required.
             </Form.Text>}
           </Form.Group>
@@ -96,7 +97,7 @@ const Home: NextPage = () => {
                 ))}
               </Form.Select>
             </>)} />
-            {'required' === errors?.account?.type && <Form.Text id="account" className="text-warning">
+            {'required' === nerrors?.account?.type && <Form.Text id="account" className="text-warning">
               This field is required.
             </Form.Text>}
           </Form.Group>
@@ -107,7 +108,7 @@ const Home: NextPage = () => {
               </Spinner>}
             </Form.Label>
             <Form.Control  {...register('streamid', {required: true})} type="text" readOnly />
-            {'required' === errors?.streamid?.type && <Form.Text id="streamid" className="text-warning">
+            {'required' === nerrors?.streamid?.type && <Form.Text id="streamid" className="text-warning">
               This field is required.
             </Form.Text>}
           </Form.Group>
@@ -118,7 +119,7 @@ const Home: NextPage = () => {
               </Spinner>}
             </Form.Label>
             <Form.Control  {...register('streamurl', {required: true})} type="text" readOnly />
-            {'required' === errors?.streamurl?.type && <Form.Text id="streamurl" className="text-warning">
+            {'required' === nerrors?.streamurl?.type && <Form.Text id="streamurl" className="text-warning">
               This field is required.
             </Form.Text>}
           </Form.Group>
