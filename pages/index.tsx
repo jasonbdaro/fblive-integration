@@ -88,6 +88,23 @@ const Home: NextPage = () => {
           <div className="mt-4 mb-4">
             <div className="fb-login-button" data-onlogin="onLogin" data-scope="public_profile,pages_show_list,publish_video,pages_read_engagement,pages_manage_posts" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true"></div>
           </div>
+          <div className="mt-4 mb-4">
+            <div id="g_id_onload"
+              data-client_id="194079921645-9k7l3bui7jo83d9lddr4gse2c4aorve1.apps.googleusercontent.com"
+              data-context="signin"
+              data-ux_mode="popup"
+              data-login_uri="localhost:3002"
+              data-auto_prompt="false">
+            </div>
+            <div className="g_id_signin"
+              data-type="standard"
+              data-shape="rectangular"
+              data-theme="outline"
+              data-text="signin_with"
+              data-size="large"
+              data-logo_alignment="left">
+            </div>
+          </div>
           <Form.Group className="mb-3" controlId="accounts">
             <Controller control={control} name="account" rules={{ required: true }} render={({ field }) => (<>
               <Form.Select aria-label="Accounts List" onChange={(value: any) => field.onChange(value)}>

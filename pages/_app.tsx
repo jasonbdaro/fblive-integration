@@ -36,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             `,
           }}
         />
+        <Script async defer src="https://accounts.google.com/gsi/client" />
       </Fragment>
     </SSRProvider>
   )
