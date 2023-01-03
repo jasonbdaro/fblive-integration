@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useEffect, useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
-import Spinner from 'react-bootstrap/Spinner';
+import Spinner from 'react-bootstrap/Spinner'
 
 const Home: NextPage = () => {
   const { register, control, getValues, setValue, reset, watch,
@@ -36,6 +36,15 @@ const Home: NextPage = () => {
       if ('unknown' === res.status) {
         console.log('Error')
       }
+    }
+    window.onGoogleLogin = function (res: any) {
+      console.log('res',res)
+      const tokenClient = window.google.accounts.oauth2.initTokenClient({
+        client_id: '194079921645-9k7l3bui7jo83d9lddr4gse2c4aorve1.apps.googleusercontent.com',
+        scope: 'https://www.googleapis.com/auth/youtube.readonly',
+        callback: '',
+      })
+      console.log('token',tokenClient)
     }
   }, [])
 
@@ -89,20 +98,11 @@ const Home: NextPage = () => {
             <div className="fb-login-button" data-onlogin="onLogin" data-scope="public_profile,pages_show_list,publish_video,pages_read_engagement,pages_manage_posts" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true"></div>
           </div>
           <div className="mt-4 mb-4">
-            <div id="g_id_onload"
-              data-client_id="194079921645-9k7l3bui7jo83d9lddr4gse2c4aorve1.apps.googleusercontent.com"
-              data-context="signin"
-              data-ux_mode="popup"
-              data-login_uri="localhost:3002"
-              data-auto_prompt="false">
+            <div id="g_id_onload" data-client_id="194079921645-9k7l3bui7jo83d9lddr4gse2c4aorve1.apps.googleusercontent.com"
+              data-context="signin" data-ux_mode="popup" data-callback="onGoogleLogin" data-auto_prompt="false">
             </div>
-            <div className="g_id_signin"
-              data-type="standard"
-              data-shape="rectangular"
-              data-theme="outline"
-              data-text="signin_with"
-              data-size="large"
-              data-logo_alignment="left">
+            <div className="g_id_signin" data-type="standard" data-shape="rectangular"
+              data-theme="outline" data-text="signin_with" data-size="large" data-logo_alignment="left">
             </div>
           </div>
           <Form.Group className="mb-3" controlId="accounts">
